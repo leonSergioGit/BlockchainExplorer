@@ -1,11 +1,67 @@
 .App {
   text-align: center;
+  background-color: black;
+  min-height: 100vh;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
 }
+
+h1 {
+  color: white;
+}
+
+.counterContainer {
+  background-color: white;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleRealizado {
+  color: black;
+  font-size: 1.2rem;
+}
+
+.counter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  width: 60%;
+  margin: 0 auto; 
+  font-size: 3rem;
+}
+
+.countup {
+  color: black;
+  background-color: white;
+}
+
+.blockComponent {
+  margin-top: 100px;
+}
+
+.blockContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 30px;
+  width: 90%;
+  margin: 50px auto 0;
+}
+
+.blockElement {
+  color: white;
+  background-color: #165ec9;
+  border-radius: 5px;
+}
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
