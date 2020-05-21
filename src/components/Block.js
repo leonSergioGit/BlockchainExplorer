@@ -34,7 +34,7 @@ const Block = (props) => {
                    <p>Index: {block.index}</p>
                    <p>Fecha: {block.timestamp}</p>
                    {block.transactions.map((trans, index2) => {
-                       return <p key={index2}>{ trans.recipient} </p>
+                       return <p key={index2}>{trans.country} </p>
                    })}
                    <p>Nonce: {block.nonce}</p>
                    <p>Hash: {block.hash}</p>
