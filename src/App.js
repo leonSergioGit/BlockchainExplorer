@@ -82,15 +82,16 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Bienvenido a la sala de minería de PLUS ULTRA BLOCKCHAIN</h1>
+      <h1 className="appTitle">Bienvenido a la sala de minería de PLUS ULTRA BLOCKCHAIN</h1>
       <Countup blocks={blockChain.length} />
       <br />
       <form onSubmit={submit}>
-        <input type="text" name="blockSearch" value={blockSearch} onChange={handleChange} />
-        <button>Buscar</button>
+        <input type="text" name="blockSearch" value={blockSearch} onChange={handleChange} className="inputFinder" />
+        <button className="blockFinder">Buscar</button>
       </form>
 
-      <div>
+      <h1 class="blockFinderTitle">BLOCK FINDER</h1>
+      <div class="blockFinderContainer">
         <h1>{searchResult}</h1>
       </div>
 

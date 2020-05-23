@@ -1,4 +1,6 @@
 import React,  { useState, useEffect }  from 'react';
+import FinderClick from './FinderClick';
+
 import '../App.css';
 import Spinner from './spinner.gif';
 
@@ -8,6 +10,7 @@ const Block = (props) => {
 
     //Estado del componente
     const [blocks, setBlocks] = useState(null);
+    const [finder, setFinder] = useState("");
 
     //Componente en el que añadiremos el html
     let myComponent;
@@ -20,29 +23,33 @@ const Block = (props) => {
         //cada vez que props es actualizado
     }, [props])
 
+    let finderComponent;
 
+    const testing = (blockIndex) => {
+        setFinder(blockIndex);
+    }
     
-
 
     //En este punto nos encontramos con que la aplicación puede tardar unos segundos en cargar la información inicial de la API.
     //Es por eso que tenemos que hacer uso de un condicional para actuar de distinta manera en caso de que ya esté cargada la información o no
     if(blocks){
-        console.log(blocks)
         let arr = Array.from(blocks.leonchain);   
         myComponent = arr.map((block, index) => {
-            return <div key={index} className="blockElement">
-                   <p>Index: {block.index}</p>
-                   <p>Fecha: {block.timestamp}</p>
-                   {block.transactions.map((trans, index2) => {
-                       return <p key={index2}>{trans.country} </p>
-                   })}
-                   <p>Nonce: {block.nonce}</p>
-                   <p>Hash: {block.hash}</p>
-                   <p>Previous Block Hash: {block.previousBlockHash}</p>
-            </div>})
+            
+
+            return <div key={index} className="blockElement" onClick={() => testing(index)}>
+                        <h3>{index === 0 ? 'Genesis Block' : 'Block'}</h3>
+                        <h4>{index === 0 ? '' : index}</h4>
+                    </div>
+            })
 
         return (
             <div className="blockComponent">
+                <h1>BLOCK VIEWER</h1>
+                <FinderClick 
+                   blockIndex={finder} 
+                   block={blocks}
+                />
                 <h1>BLOCKS</h1>
                 <div className="blockContainer">
                 {myComponent}

@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 .App {
   text-align: center;
   background-color: black;
   min-height: 100vh;
-  
+  font-family: 'Roboto', sans-serif;
 }
 
 * {
@@ -10,8 +12,15 @@
   padding: 0;
 }
 
+
 h1 {
   color: white;
+}
+
+.appTitle {
+  padding-top: 40px;
+  margin-bottom: 40px;
+  font-size: 2.2rem;
 }
 
 .counterContainer {
@@ -21,11 +30,12 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-radius: 5px;
 }
 
 .titleRealizado {
   color: black;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
 }
 
 .counter {
@@ -42,6 +52,71 @@ h1 {
   background-color: white;
 }
 
+form {
+  margin-top: 30px;
+}
+
+.inputFinder {
+  padding: 15px;
+}
+
+.blockFinderTitle {
+  margin-top: 40px;
+}
+
+.blockFinderContainer {
+  color: white;
+  min-height: 200px;
+  background-color: #165ec9;
+  width: 90%;
+  margin: 20px auto 80px;
+  border-radius: 5px;
+}
+
+.blockFinder {
+  margin-left: 20px;
+  background-color: white;
+  border: none;
+  padding: 10px;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+
+}
+
+.finderClick {
+  color: white;
+  min-height: 200px;
+  background-color: #165ec9;
+  width: 90%;
+  margin: 20px auto 80px;
+  border-radius: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+
+.viewerTitle {
+  margin-bottom: 20px;
+}
+
+.finderViewer {
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.finderViewer > div > p {
+  text-align: left;
+  padding: 5px 0 5px 20px;
+  border-top: 1px solid white;
+}
+
+.finderViewer > div > p > span {
+ margin-right: 30px;
+ font-size: 1.3rem;
+}
+
 .blockComponent {
   margin-top: 100px;
 }
@@ -53,12 +128,14 @@ h1 {
   row-gap: 30px;
   width: 90%;
   margin: 50px auto 0;
+  padding-bottom: 50px;
 }
 
 .blockElement {
   color: white;
   background-color: #165ec9;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 
