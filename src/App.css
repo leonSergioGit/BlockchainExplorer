@@ -10,6 +10,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 
@@ -112,13 +113,49 @@ form {
   border-top: 1px solid white;
 }
 
+.transactionNumber {
+  margin: 10px 0 10px 0;
+}
+
 .finderViewer > div > p > span {
  margin-right: 30px;
  font-size: 1.3rem;
 }
 
+.transContainer {
+  border: 1px solid white;
+  border-radius: 5px;
+  margin: 15px 5px 15px 5px;
+  padding: 10px 0 10px 0;
+}
+
+.transContainer span {
+  color: black;
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+
+.patient {
+  text-align: left;
+  margin: 25px;
+}
+
+.transInfo {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 10px 0;
+}
+
+.transInfo > p {
+  width: 50%;
+}
+
 .blockComponent {
   margin-top: 100px;
+}
+
+.noResults {
+  color: #400a06;
 }
 
 .blockContainer {
